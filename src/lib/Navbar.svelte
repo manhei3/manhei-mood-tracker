@@ -2,4 +2,4 @@
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Mood Tracker😇</a>
       </div>
-</nav>      
+</nav>
