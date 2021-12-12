@@ -4,26 +4,26 @@
     import EntryModal from '$lib/EntryModal.svelte'
     import supabase from '$lib/db';
 
-async function signOut() {
-    const { error } = await supabase.auth.signOut();
+    async function signOut() {
+        const { error } = await supabase.auth.signOut();
 
-    if (error) alert(error.message); // alert if error
-}
+        if (error) alert(error.message); // alert if error
+    }
 
-// Select entries
-async function getEntries() {
-    const { data, error } = await supabase.from('moodEntries').select();
-    if (error) alert(error.message);
+    // Select entries
+    async function getEntries() {
+        const { data, error } = await supabase.from('moodEntries').select();
+        if (error) alert(error.message);
 
-    return data;
-}
+        return data;
+    }
 </script>
 <Greeting />
 <!-- Entries -->
 <section class="container px-4 py-3">
     <div class="d-flex justify-content-between">
-   	 <div class="p-2">Mood Log</div>
-   	 <input class="btn btn-light mb-2" type="button" value="+ New Entry" data-bs-toggle="modal" data-bs-target="#newEntry"/>
+   	    <div class="p-2">Mood Log</div>
+   	    <input class="btn btn-light mb-2" type="button" value="+ New Entry" data-bs-toggle="modal" data-bs-target="#newEntry"/>
     </div>
 
 
