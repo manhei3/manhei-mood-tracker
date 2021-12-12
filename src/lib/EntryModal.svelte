@@ -8,7 +8,7 @@
         good: '🙂',
         best: '😁'
     }
-    let emoji="😐"
+    let emoji='😐'
     let day ='1'
     let month ='1'
     let year ='2021'
