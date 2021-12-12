@@ -16,21 +16,22 @@
     let comment = 'This is a comment'
 
     // Insert entry
-async function saveEntry() {
-    const { error } = await supabase.from('moodEntries').insert(
-   	 {
-   		 user_id: supabase.auth.user().id,
-   		 day: day,
-   		 month: month,
-   		 year: year,
-   		 mood: mood,
-   		 comment: comment
-   	 }
-    );
-    if (error) alert(error.message);
+    async function saveEntry() {
+        const { error } = await supabase.from('moodEntries').insert(
+   	        {
+   		        user_id: supabase.auth.user().id,
+   		        day: day,
+   		        month: month,
+   		        year: year,
+   		        mood: mood,
+   		        comment: comment
+   	        }
+        );
+        if (error) alert(error.message);
 
-    location.reload(); // Refresh the page.
-}
+        location.reload(); // Refresh the page.
+    }
+
 </script>
 <div class="modal fade" id="newEntry" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
